@@ -4,7 +4,7 @@
     <%= label_tag 'query', "Name or Unique ID", :id => "query_label" %>
     <%= text_field_tag 'query', params[:query] %>
     
-    <%= submit_tag "Search", :id => "search_button" %>
+    <%= submit_tag "Search", :id => "search_button", :class =>"submitButton" %>
 <%-end  %>
 
 <%= render :partial => 'search_results' %>

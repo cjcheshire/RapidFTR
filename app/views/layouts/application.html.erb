@@ -5,6 +5,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
   <title><%= @page_name %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="shortcut icon" href="/favicon.ico" />
   <%= stylesheet_link_tag 'application' %>
   <%= yield :stylesheet %>
@@ -21,58 +22,59 @@
   <%= yield :javascript %>
 </head>
 <body class="<%= @body_class %>">
-<div class="page-container">
   <div class="page-header">
-    <p class="brand"><%= link_with_confirm image_tag("logo.jpg"), '/'%></p>
-
-    <div class="nav">
-      <ul>
-		    <li><%= link_with_confirm 'Home', '/'%></li>
-		    <li><%= link_with_confirm 'Contact &amp; Help', contact_information_path("administrator")%></li>
-        <% unless current_user_name.nil? %>
-          <li><%= link_with_confirm 'Search', :search_children %></li>
-          <% unless !is_admin? %>
-              <li><%= link_with_confirm 'Admin', admin_path %></li>
-  	      <% end %>
-	        <li><%= link_with_confirm 'Account', edit_user_path(User.find_by_user_name(current_user_name)) %></li>
-        <% end %>
-        <% unless current_user_name.nil? %>
-            <li class="userInfo">Logged in as <em><%= current_user_name %></em> (<%= link_with_confirm 'Logout', :logout %>)</li>
-        <% end %>
-      </ul>
+    <div class="container">
+      <p class="brand"><%= link_with_confirm image_tag("logo.jpg"), '/'%></p>
+      <div class="nav">
+        <ul>
+  		    <li><%= link_with_confirm 'Home', '/'%></li>
+  		    <li><%= link_with_confirm 'Contact &amp; Help', contact_information_path("administrator")%></li>
+          <% unless current_user_name.nil? %>
+            <li><%= link_with_confirm 'Search', :search_children %></li>
+            <% unless !is_admin? %>
+                <li><%= link_with_confirm 'Admin', admin_path %></li>
+    	      <% end %>
+  	        <li><%= link_with_confirm 'Account', edit_user_path(User.find_by_user_name(current_user_name)) %></li>
+          <% end %>
+          <% unless current_user_name.nil? %>
+              <li class="userInfo">Logged in as <em><%= current_user_name %></em> (<%= link_with_confirm 'Logout', :logout %>)</li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
+  
+  <div class="page-container container">
 
-  <div class="page-content">
-    <h1><%= @page_name || "&nbsp;" %></h1>
+    <div class="page-content">
+      <h1><%= @page_name || "&nbsp;" %></h1>
 
-    <div class="content-section">
-      <% if flash[:notice].present? %>
-        <div class='flash'>
-          <p class='notice'><%= flash[:notice] %></p>
-        </div>
-      <% end %>
-      <% if flash[:error].present? %>
-        <div class='flash'>
-          <p class='error'><%= flash[:error] %></p>
-        </div>
-      <% end %>
-      <%= yield %>
+      <div class="content-section">
+        <% if flash[:notice].present? %>
+          <div class='flash'>
+            <p class='notice'><%= flash[:notice] %></p>
+          </div>
+        <% end %>
+        <% if flash[:error].present? %>
+          <div class='flash'>
+            <p class='error'><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <%= yield %>
+      </div>
+
+      <div class="content-aside">
+        <%= render :partial => 'shared/sidebar' %>
+      </div>
     </div>
 
-    <div class="content-aside">
-      <%= render :partial => 'shared/sidebar' %>
-    </div>
   </div>
 
-
-</div>
-
-<!-- idle dialog window markup -->
-<div id="dialog" title="Your session is about to expire!">
-	<p>You will be logged off in <span id="dialog-countdown"></span> seconds.</p>
-	<p>Do you want to continue your session?</p>
-</div>
+  <!-- idle dialog window markup -->
+  <div id="dialog" title="Your session is about to expire!">
+  	<p>You will be logged off in <span id="dialog-countdown"></span> seconds.</p>
+  	<p>Do you want to continue your session?</p>
+  </div>
 
 </body>
 </html>

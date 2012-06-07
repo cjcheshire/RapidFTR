@@ -1,0 +1,124 @@
+label {
+
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .content-section {
+    padding: 10px;
+  }
+  label {
+    margin-right: 5px;
+  }
+
+  input[type=text], input[type=password], select {
+    width: 90%; 
+  }
+  
+  .tab-handles {
+    position: relative;
+  }
+  .tab-handles li a {
+    border: 0;
+    border-bottom: 1px solid;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+
+}
+
+/* (CJC) ----------- */
+@media only screen and (min-width: 768px) {
+  
+  .content-section {
+  	float: left;
+  	width: 630px;
+  	padding: 20px;
+  }
+  .radioList dt {
+  	margin-right: 10px;
+  }
+  
+  .page-header .brand {
+    float: left;
+  }
+  .page-header .nav {
+	  float: right;
+	  padding-top: 30px;
+  }  
+  .tool-tip-label {
+    display: block;
+    margin: 0 0 2px 0;
+  }
+  .tool-tip-label label {
+    display: inline-block;
+  }
+  input[type=text], input[type=password], select {
+  	width: 200px;
+  }
+  textarea {
+  }
+  
+  .tab-handles li {
+
+  }
+  .tab-handles li a {
+  	border-width: 1px 1px 0 0;
+  }
+
+
+}
+/* (CJC) ----------- */
+@media only screen and (min-width: 960px) {
+
+  .container {
+    width: 960px;
+    margin: 0 auto; 
+  } 
+  .page-header .brand {
+  	width: 225px;
+  } 
+  .page-header .nav {
+  }
+  .profile-page .content-section {
+	  width: 555px;
+	}
+
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+	
+
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+
+}

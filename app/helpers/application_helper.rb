@@ -23,9 +23,7 @@ module ApplicationHelper
   end
 
   def submit_button(name = 'Save')
-    content_tag(:p, :class => 'submitButton') do
-      submit_tag(name)
-    end
+    submit_tag(name,:class => 'submitButton')
   end
 
   def cancel_button(path)

@@ -7,9 +7,7 @@
       <h3><%= @field.type.humanize %> details</h3>
  			<%= render :partial => "common", :locals => {:f => f} %>
     </fieldset>
-    <p class='submitButton' >
-      <%= f.submit 'Save' %>
-    </p>   
+    <%= f.submit 'Save', :class => "submitButton" %>
   
     <%= cancel_button(choose_field_path(@form_section.unique_id)) %>
 <% end %>

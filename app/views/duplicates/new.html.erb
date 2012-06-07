@@ -5,7 +5,5 @@
 <% form_tag child_duplicate_path(@child), :method => :post do %>
   <%= label_tag(:parent_id, "Enter the ID of the record this is a duplicate of:") %>
   <%= text_field_tag(:parent_id) %>
-  <% content_tag(:p, :class => 'submitButton') do %>
-    <%= submit_tag("Mark as duplicate", :confirm => 'Are you sure you want to continue? If so, click OK. If not, click Cancel.') %>
-  <% end %>
+  <%= submit_tag("Mark as duplicate", :confirm => 'Are you sure you want to continue? If so, click OK. If not, click Cancel.', :class => 'submitButton') %>
 <% end %>
