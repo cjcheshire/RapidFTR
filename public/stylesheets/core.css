@@ -238,7 +238,8 @@ dl.checkboxList {
 	overflow: hidden;
 	margin-bottom: 1em
 }
-.cancelButton a {
+.cancelButton {
+  display: block;
 	width: auto;
 	height: auto;
 	background: #aaa;
@@ -247,7 +248,8 @@ dl.checkboxList {
 	color: #fff;
 	float: left;
 }
-.discardButton a {
+.discardButton {
+  display: block;
 	width: auto;
 	height: auto;
 	background: #aaa;

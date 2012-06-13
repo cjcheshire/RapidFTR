@@ -18,7 +18,9 @@
  		  <%= f.text_area :option_strings_text %>
    	</div>
   </fieldset>
-  <%= f.submit 'Save', :class => "submitButton" %>
-  <%= cancel_button(choose_field_path(@form_section.unique_id)) %>
+  <div class="clearfix">  
+    <%= f.submit 'Save', :class => "submitButton" %>
+    <%= cancel_button(choose_field_path(@form_section.unique_id)) %>
+  </div>
 <% end %>
 

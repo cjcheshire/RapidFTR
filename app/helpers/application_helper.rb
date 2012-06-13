@@ -27,15 +27,11 @@ module ApplicationHelper
   end
 
   def cancel_button(path)
-    content_tag(:p, :class => 'cancelButton') do
-      link_to 'Cancel', path, :confirm => 'Are you sure you want to cancel?'
-    end
+    link_to 'Cancel', path, :class => 'cancelButton', :confirm => 'Are you sure you want to cancel?'
   end
 
   def discard_button(path)
-    content_tag(:p, :class => 'discardButton') do
-      link_to 'Discard', path, :confirm => 'Clicking OK Will Discard Any Unsaved Changes. Click Cancel To Return To The Child Record Instead.'
-    end
+    link_to 'Discard', path, :class => 'discardButton', :confirm => 'Clicking OK Will Discard Any Unsaved Changes. Click Cancel To Return To The Child Record Instead.'
   end
   
   def show_sidebar_links
