@@ -60,7 +60,7 @@ Then /^I should see (\d*) divs with text "(.*)" for class "(.*)"$/ do |quantity,
 end
 
 Then /^the "([^\"]*)" button presents a confirmation message$/ do |button_name|
-  page.find("//p[@class='#{button_name.downcase}Button']/a")[:onclick].should =~ /confirm/
+  page.find("//a[@class='#{button_name.downcase}Button']")[:onclick].should =~ /confirm/
 end
 
 Then /^I should (not )?see the "([^\"]*)" tab$/ do |do_not_want, tab_name|
