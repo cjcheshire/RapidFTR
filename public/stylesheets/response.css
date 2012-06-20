@@ -75,7 +75,9 @@ label {
   }
   input[type=text], input[type=password], select {
   	width: 200px;
+  	margin-right: 3px;
   }
+  
   textarea {
   }
   
@@ -84,6 +86,10 @@ label {
   }
   .tab-handles li a {
   	border-width: 1px 1px 0 0;
+  }
+  
+  .search-filters input[type=text], .search-filters input[type=password], .search-filters select {
+    width: 130px;
   }
 
 
