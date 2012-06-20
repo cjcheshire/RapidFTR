@@ -80,7 +80,7 @@ h2 {
 }
 h3 {
 	color: #678;
-	font-size: .875em;
+	/*font-size: .875em;*/
 }
 /* default: table */
 table {
@@ -112,12 +112,11 @@ tfoot th {
 }
 /* default: forms */
 fieldset {
-	padding: 0.5em 10px;
-	color: #666;
-	background-color: #ddd;
-	border: 1px solid #678;
 	margin-bottom: 1em;
-	overflow: hidden;
+	padding: 1em 0 .1em 0;
+	color: #666;
+	background-color: transparent;
+	border: 0;
 	clear: both;
 }
 fieldset legend {
@@ -226,13 +225,14 @@ dl.checkboxList {
 }
 .submitButton {
 	width: auto;
-	height: auto;
-	border: 1px solid #678;
+	height: 37px;
+	/*border: 1px solid #678;*/
 	background: #678;
 	padding: 2px 30px;
 	font-weight: bold;
 	color: #fff;
-	float: right;
+	/*float: right;*/
+	display: block;
 }
 .submitButton {
 	overflow: hidden;
@@ -363,6 +363,7 @@ dl.checkboxList {
 /* tabbed content  */
 ul.tab-handles {
 	border-left: 1px solid #678;
+	border-bottom: 1px solid #678;
 	margin-bottom: 0;
 	position: relative;
 	top: 1px;
@@ -485,9 +486,11 @@ td.checkbox {
 	margin-left: 60px;
 }
 .profiles-list-item h3 {
-	margin: 0 10px;
 	float: left;
+	margin: 0 10px;
 	padding: 0;
+	border: 0;
+	text-transform: capitalize;
 }
 .profiles-list-item .view-edit {
 	float: right;
@@ -536,6 +539,9 @@ td.checkbox {
 	clear: both;
 	width: 100%
 }
+.profiles-list-item dl.basic {
+  text-transform: capitalize;
+}
 .profiles-list-item dt {
 	float: left;
 	margin-right: 10px;
@@ -558,7 +564,6 @@ td.checkbox {
 .form-section-info {
 	border-bottom: 1px solid #678;
 	margin-bottom: 1em;
-	padding-bottom: .5em;
 	font-size: 16px;
 }
 .form-section-info .form-section-help-text {
