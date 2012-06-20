@@ -2,12 +2,8 @@ label {
 
 }
 
-
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .content-section {
-    padding: 10px;
-  }
   label {
     margin-right: 5px;
   }
@@ -51,10 +47,10 @@ label {
 @media only screen and (min-width: 768px) {
   
   .content-section {
-  	float: left;
   	width: 630px;
   	padding: 20px;
   }
+
   .radioList dt {
   	margin-right: 10px;
   }
@@ -92,6 +88,10 @@ label {
     width: 130px;
   }
 
+  #search_form #query {
+  	width: 400px;
+  }  
+
 
 }
 /* (CJC) ----------- */
@@ -101,6 +101,14 @@ label {
     width: 960px;
     margin: 0 auto; 
   } 
+  .content-section {
+  	float: left;
+	}
+  .content-aside {
+  	float: right;
+  	width: 230px;
+  	margin-right: 10px;
+  }
   .page-header .brand {
   	width: 225px;
   } 
